@@ -168,22 +168,20 @@
 
 
 
-const fetchData = async () => {
-    const usersResponse = await fetch('https://jsonplaceholder.typicode.com/users')
-    const postsResponse = await fetchData('https://jsonplaceholder.typicode.com/posts')
+const fetchData = async() => {
+    const useresResponse = await fetch('https://jsonplaceholder.typicode.com/users') 
+    const postsResponse = await fetch('https://jsonplaceholder.typicode.com/posts')
 
-    const users = await usersResponse.json()
+    const users = await useresResponse.json()
     const posts = await postsResponse.json()
 
     return {users, posts}
-
 }
 
-const renderPage = async () =>{
-    const{users, posts} = await fetchData()
+const renderPage = async() => {
+    const {users, posts} = await fetchData()
 
     console.log(users)
     console.log(posts)
 }
 
-renderPage()
