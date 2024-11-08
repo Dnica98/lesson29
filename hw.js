@@ -1,7 +1,7 @@
 const list= document.getElementById('list')
 
 
-fetch(`https://jsonplaceholder.typicode.com/users?_limit=3`, {
+fetch(`https://jsonplaceholder.typicode.com/users?_limit=5`, {
         method: 'GET'
     })
     .then((res) => res.json())
